@@ -16,39 +16,43 @@ import { useNavigate } from 'react-router-dom';
 
 export const mainListItems = () => {
   const navigate = useNavigate();
+
+  const [path, setPath] = React.useState("");
+
   const handleClick = (path: any) => {
     // 👇️ replace set to true
+    setPath(path);
     navigate(path, {replace: true});
   };
 
   return <React.Fragment>
-    <ListItemButton onClick={() => navigate('/dashboard')}>
+    <ListItemButton onClick={() => handleClick('/dashboard')}>
       <ListItemIcon>
-        <DashboardIcon />
+        <DashboardIcon color={path==='/dashboard'?'primary':'inherit'} />
       </ListItemIcon>
       <ListItemText primary="Dashboard"/>
     </ListItemButton>
-    <ListItemButton onClick={() => navigate('/challenges')}>
+    <ListItemButton onClick={() => handleClick('/challenges')}>
       <ListItemIcon>
-        <SportsIcon />
+        <SportsIcon color={path==='/challenges'?'primary':'inherit'} />
       </ListItemIcon>
       <ListItemText primary="Challenges"/>
     </ListItemButton>
-    <ListItemButton onClick={() => navigate('/teams')}>
+    <ListItemButton onClick={() => handleClick('/teams')}>
       <ListItemIcon>
-        <GroupIcon />
+        <GroupIcon color={path==='/teams'?'primary':'inherit'} />
       </ListItemIcon>
       <ListItemText primary="Team"/>
     </ListItemButton>
-    <ListItemButton onClick={() => navigate('/rewards')}>
+    <ListItemButton onClick={() => handleClick('/rewards')}>
       <ListItemIcon>
-        <EmojiEventsIcon />
+        <EmojiEventsIcon color={path==='/rewards'?'primary':'inherit'} />
       </ListItemIcon>
       <ListItemText primary="Rewards"/>
     </ListItemButton>
-    <ListItemButton onClick={() => navigate('/feeds')}>
+    <ListItemButton onClick={() => handleClick('/feeds')}>
       <ListItemIcon>
-        <RssFeedIcon />
+        <RssFeedIcon color={path==='/feeds'?'primary':'inherit'} />
       </ListItemIcon>
       <ListItemText primary="News feed"/>
     </ListItemButton>

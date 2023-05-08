@@ -37,13 +37,13 @@ export default function LeadGeneration(props: { toogleTrend: () => void, toogleC
         on 1st May, 2023
       </Typography> */}
       <Grid container xs={12} md={12} lg={12}>
-        <Grid xs={12} md={12} lg={8}>
+        <Grid xs={12} md={12} lg={2}>
           <Link color="primary" href="#" onClick={(e) => { preventDefault(e); props.toogleTrend() }}>
             {/* View trends */}
             <BarChartIcon />
           </Link>
         </Grid>
-        <Grid xs={12} md={12} lg={4}>
+        <Grid xs={12} md={12} lg={10}>
           <IconButton
             color="primary"
             aria-label="upload picture"
@@ -51,7 +51,8 @@ export default function LeadGeneration(props: { toogleTrend: () => void, toogleC
             size="small"
             onClick={(e) => { preventDefault(e); props.toogleChallenge() }}
           >
-            <SportsIcon /> ADD
+            <Typography variant='caption'>(2 active challenges)</Typography>
+            <SportsIcon /> <Typography variant='button'>ADD</Typography>
           </IconButton>
         </Grid>
       </Grid>

@@ -1,5 +1,7 @@
+import RewardList from "./RewardList";
+
 const Rewards = () => {
-  return <div>Rewards</div>
+  return <RewardList/>
 }
 
 export default Rewards;

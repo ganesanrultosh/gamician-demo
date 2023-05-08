@@ -1,5 +1,7 @@
+import TeamList from "./TeamList";
+
 const Teams = () => {
-  return <div>Teams</div>
+  return <TeamList/>
 }
 
 export default Teams;
