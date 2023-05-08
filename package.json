@@ -2,7 +2,7 @@
   "name": "vite-template-redux",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://ganesanrultosh.github.io/gamician",
+  "homepage": "https://ganesanrultosh.github.io/gamician-demo",
   "type": "module",
   "scripts": {
     "dev": "vite",
